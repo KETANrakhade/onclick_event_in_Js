@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buttons</title>
+</head>
+
+<body>
+    <style>
+        .click {
+            text-align: center;
+            align-content: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    </head>
+
+    <body>
+        <div class="click" id="demo">
+            <button  ondblclick="changeBackgroundToBlue()">CHANGE TO BLUE</button>
+            <button  ondblclick="changeBackgroundToWhite()">CHANGE TO WHITE</button>
+        </div>
+
+        <script>
+            function changeBackgroundToBlue() {
+                document.getElementById("demo").style.backgroundColor = "lightblue";
+            }
+
+            function changeBackgroundToWhite() {
+           document.getElementById("demo").style.backgroundColor = "white";
+            }
+        </script>
+    </body>
+
+</html>
