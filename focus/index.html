@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<style>
+  a:focus,
+  a:active {
+    color: red;
+  }
+  .box{
+ text-align: center;
+ align-items: center;
+ margin-top: 20px;
+  }
+  .heighlight{
+    border: 2px solid;
+    color: skyblue;
+    border-color: aqua;
+    padding: 10px;
+  }
+</style>
+
+<body>
+<div class="box">
+
+  <a id="myAnchor" class="heighlight" href="https://codebergIt.com">THIS IS HEIGHLIGHT</a>
+
+  <p>Click the buttons to give or remove focus from the link above.</p>
+
+  <input type="button" onclick="getfocus()" value="Get focus">
+  <input type="button" onclick="losefocus()" value="Lose focus">
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
