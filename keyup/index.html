@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coders</title>
+</head>
+<style>
+.languages{
+    width: 100%;
+    height: 100vh;
+   align-content: center;
+  text-align: center;
+}
+.selection{
+    padding: 5px;
+}
+</style>
+<body>
+    <div class="languages rounded">
+    <p>Select a language for coding.</p>
+    <select class="selection" id="mySelect" onkeyup="myFunction()">
+        <option value="javascript">Javascript</option>
+        <option value="python">Python</option>
+        <option value="c++">C++</option>
+        <option value="java">Java</option>
+    </select>
+   </div>
+    <p id="demo"></p>
+    <script src="script.js"></script>
+</body>
+
+</html>
