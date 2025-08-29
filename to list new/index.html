@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Fitplan </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="icons//flaticon/flaticon.css" />
+  <link rel="stylesheet" href="icons/line-awesome/line-awesome.min.css" />
+  <link rel="stylesheet" href="icons/themify-icons.css" />
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.18/index.global.min.js'></script>
+</head>
+
+<body>
+  <section class="all-item">
+    <div class="navbar">
+      <div class="logo">
+        <img src="img/fe0bd33338ea1fb92cfc.webp" width="50px">
+        <!-- <h3>TO DO</h3> -->
+      </div>
+      <div class="nav-links">
+        <div class="nav-item active">
+          <i class="fa-solid fa-house"></i>
+          Home
+        </div>
+        <div class="nav-item">
+          <i class="fa-regular fa-calendar"></i>
+          Calendar
+        </div>
+        <div class="nav-item">
+          <i class="fa-solid fa-square-person-confined"></i>
+          Activity
+        </div>
+        <div class="nav-item">
+          <i class="fa-regular fa-message"></i>
+          Messages
+        </div>
+        <div class="nav-item">
+          <i class="fa-solid fa-gear"></i>
+          Settings
+        </div>
+      </div>
+      <div class="nav-icons">
+        <input type="text" class="search-box" placeholder="Search here...">
+        <div class="icon">
+          <i class="fa-solid fa-bell"></i>
+          <span class="dot"></span>
+        </div>
+        <div class="profile">
+          <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" alt="Profile">
+        </div>
+      </div>
+    </div>
+    <section>
+      <div class="container">
+        <div class="display">
+          <div class=" left-side">
+            <div class="img-slider">
+              <div class="logo-slider">
+                <div class="logos-slide">
+                  <div class="slide"><img class="slide-img" src="img/4996665.jpg" alt="Image 1" /></div>
+                  <div class="slide"><img class="slide-img" src="img/3452442.jpg" alt="Image 2" /></div>
+                  <div class="slide"><img class="slide-img" src="img/3644996.jpg" alt="Image 3" /></div>
+                  <div class="slide"><img class="slide-img" src="img/7241211.jpg" alt="Image 4" /></div>
+                  <div class="slide"><img class="slide-img" src="img/80_cmVtb3RlX3dvcmtpbmctMDg.jpg" alt="Image 5" />
+                  </div>
+                  <div class="slide"><img class="slide-img" src="img/7241211.jpg" alt="Image 6" /></div>
+                  <div class="slide"><img class="slide-img" src="img/3644996.jpg" alt="Image 7" /></div>
+                </div>
+              </div>
+            </div>
+            <div class="calendar-box">
+              <h3>Upcoming Schedule</h3>
+              <div id="calendar"></div>
+
+              <ul id="dateEvents"></ul>
+
+            </div>
+          </div>
+          <div class="right-side">
+            <div class="heading">
+              <!-- <h1>Have A Good Day Ketan
+                <div class="shake">
+                  <div class="element"><img src="img/wave.png" height="35px" alt=""></div>
+                </div>
+              </h1>
+              <p>Fuel your days with the boundless enthusiasm of a lifelong explorer.</p> -->
+              <div class="my-day">
+
+                <button class="theme__icon">
+                  <span></span>
+                  <span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </span>
+                  <span></span>
+                </button>
+                <h3>My Day</h3>
+                <div id="customDate" class="customDate">waiting...</div>
+              </div>
+              <div class="search-click">
+                <div class="input-row">
+                  <input id="taskInput" class="wantto-search" placeholder=" I want to..." aria-label="New task" />
+                </div>
+                <button class="button" id="addBtn" type="button">
+                  <span class="button__text">Add Work</span>
+                  <span class="button__icon" onclick="addTask()"><svg class="svg" fill="none" height="24"
+                      stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="12" x2="12" y1="5" y2="19"></line>
+                      <line x1="5" x2="19" y1="12" y2="12"></line>
+                    </svg></span>
+                </button>
+              </div>
+              <div class="disable-btn">
+                <button class="clear-btn" onclick="showAllTasks()">
+                  <span class="button_top">Show</span>
+                </button>
+                <!-- <button class="show-task" onclick="showAllTasks()">Show </button> -->
+                <!-- <button class="remove-task" onclick="clearTaskList()">Clear</button> -->
+                <!-- From Uiverse.io by 0xnihilism -->
+                <button class="clear-btn" onclick="clearTaskList()">
+                  <span class="button_top"> Clear</span>
+                </button>
+
+              </div>
+              <div class="todo-container">
+                <div class="task-header">
+                  <span>Title</span>
+
+
+                  <div id="customDate" class="customDates"></div>
+
+                  <span>Importance</span>
+                </div>
+                <ul id="taskList" class="task-list">
+                </ul>
+                <div class="panel" aria-label="Completed">
+                  <div class="header">
+                    <h2>Completed - <span id="completedCount"> 0</span></h2>
+
+                  </div>
+                  <ul id="completedTasks" class="list" aria-label="Completed tasks">
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </section>
+  </section>
+  <script src="script.js"></script>
+</body>
+
+</html>
